@@ -10,6 +10,7 @@ import {
   Radio,
   Stack,
   Divider,
+  Button,
 } from "@chakra-ui/react";
 
 const Women = () => {
@@ -20,6 +21,9 @@ const Women = () => {
   const [maxPrice, setMaxPrice] = React.useState("9999");
   const [minDiscount, setMinDiscount] = React.useState("0");
   const [maxDiscount, setMaxDiscount] = React.useState("80");
+  const [cartItems, setCartItems] = React.useState(0);
+  const [sortBy, setSortBy] = React.useState("");
+  const [orderBy, setOrderBy] = React.useState("");
 
   const getData = async () => {
     let res = await axios.get(
@@ -28,15 +32,44 @@ const Women = () => {
     setData(res.data);
   };
 
+  const handleAddToCart = async (id) => {
+    let res = await axios.patch(`http://localhost:8080/data/${id}`,{
+      quantity : 1,
+    });
+    setCartItems(prev => prev + 1);
+  }
+
+  const handleRemoveFromCart = async (id) => {
+    let res = await axios.patch(`http://localhost:8080/data/${id}`,{
+      quantity : 0,
+    });
+    setCartItems(prev => prev - 1);
+  }
+  
+  const handleClick = (id) => {
+    data.forEach((elem) => {
+      if(elem.id === id){
+        elem.quantity === 0 ? handleAddToCart(id) : handleRemoveFromCart(id);
+        }
+      })
+  }
+
+  const handleChange = () => {
+
+  }
+
   React.useEffect(() => {
     getData();
-  }, [category, minPrice, maxPrice, maxDiscount, minDiscount, grid]);
-
-
+  }, [category, minPrice, maxPrice, maxDiscount, minDiscount, grid, cartItems,sortBy,orderBy]);
 
   return (
-    <Box width={{xl:"90%","2xl":"75%"}} margin="auto" display={"flex"} gap="3" >
-      <Box  textAlign="left" width='25vw' >
+    <Box
+      width={{ xl: "90%", "2xl": "75%" }}
+      margin="auto"
+      display={"flex"}
+      gap="3"
+    >
+      <Box textAlign="left" width="25vw">
         <Text as="b" fontSize={"lg"}>
           Refine By
         </Text>
@@ -155,7 +188,7 @@ const Women = () => {
 
       {/* //////////////////////////////////////////////////////// */}
 
-      <Box maxW={'70vw'} >
+      <Box maxW={"70vw"}>
         <Text as={"b"} fontSize="4xl">
           Clothing
         </Text>
@@ -231,18 +264,63 @@ const Women = () => {
               </Box>
             </Box>
           </Box>
-          <Box>SORT BY</Box>
+          <Box display={"flex"} gap="5"  >
+            <Box minWidth={'fit-content'}  >
+            <Text>SORT BY</Text>
+            </Box>
+            <Select size='xs'   >
+              <option  value={"price"}>Price(lowest first)</option>
+              <option  value={"price"}>Price(highest first)</option>
+              <option  value={"discount"}>Discount(lowest first)</option>
+              <option  value={"discount"}>Discount(highest first)</option>
+            </Select>
+          </Box>
         </Box>
 
         <Divider marginBottom={"5"} marginTop="1" />
         <Grid templateColumns={`repeat(${grid},1fr)`} gap="5">
           {data.map((elem) => {
             return (
-              <Box key={elem.id}>
+              <Box key={elem.id} >
                 <Image src={elem.image} alt="image not found" />
-                <Text>Brand : {elem.brand}</Text>
-                <Text>Discount : {elem.discount}</Text>
-                <Text>Offer Price : {elem.offer_prices}</Text>
+                <Text textColor={"#B19975"} as="b">
+                  {elem.brand}
+                </Text>
+                <Text> {elem.name}</Text>
+                <Box
+                  display={"flex"}
+                  justifyContent="center"
+                  alignItems={"baseline"}
+                  gap={"1"}
+                >
+                  <Text as="b" textColor={"gray.600"}>
+                    {" "}
+                    {elem.price}
+                  </Text>
+                  <Text
+                    textDecoration={"line-through"}
+                    fontSize="sm"
+                    textColor={"gray.600"}
+                  >
+                    {" "}
+                    {elem.orginal_price}
+                  </Text>
+                  <Text
+                    textColor={"#B19975"}
+                    fontSize="sm"
+                  >{` (${elem.discount}% off)`}</Text>
+                </Box>
+                <Text textColor={"#3AB649"} fontSize="smaller" as="b">
+                  {" "}
+                  Offer price ₹{elem.offer_prices}
+                </Text>
+                <Box  >
+                  <Button onClick={()=>handleClick(elem.id)}  >
+                    {elem.quantity === 0
+                      ? "Add to cart"
+                      : "Remove from cart"}{" "}
+                  </Button>
+                </Box>
               </Box>
             );
           })}
