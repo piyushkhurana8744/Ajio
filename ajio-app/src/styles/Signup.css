@@ -1,0 +1,70 @@
+.container{
+  margin-top: 10%;
+  margin-left: 35%;
+  margin-right: 35%;
+  height: 600px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.main h1{
+  text-align: center;
+  font-size: 30px;
+  margin-right:35%;
+  margin-top: 10%;
+}
+
+.main p{
+  margin-top: 5%;
+  font-size: 23px;
+  margin-right: 46%;
+  margin-bottom: 5%;
+}
+
+.left img{
+  width: 30%;
+  height: 45px;
+  border: 1px solid red;
+  margin-left:07%;
+}
+
+.right img{
+  width: 30%;
+  height:45px;
+  border: 1px solid red;
+  margin-right:25%;
+}
+
+.main1 p{
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 25%;
+}
+
+.main2 p{
+  margin-top: 2%;
+  font-size: 20px;
+  margin-right: 28%;
+}
+.main input{
+  border: 1px solid grey;
+  width:60%;
+  height: 40px;
+  margin-right:120px;
+}
+
+.main button{
+  margin-top: 30px;
+  border: none;
+  width: 25%;
+  cursor: pointer;
+  height: 40px;
+  color: white;
+  margin-right: 270px;
+  background-color: rgb(204, 151, 5);
+}
+
+.main3 p{
+  margin-top: 2%;
+  font-size: 18px;
+  margin-right: 3%;
+}
