@@ -36,9 +36,9 @@ const MenPage = () => {
     setCartItems(prev => prev - 1);
   }
    const handleClick = (id) => {
-    menData.forEach((elem) => {
-      if(elem.id === id){
-        elem.quantity === 0 ? handleAddToCart(id) : handleRemoveFromCart(id);
+    menData.forEach((el) => {
+      if(el.id === id){
+        el.quantity === 0 ? handleAddToCart(id) : handleRemoveFromCart(id);
         }
       })
   }
@@ -301,7 +301,7 @@ const MenPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box color="black">SORT BY</Box>
+          <Box color="gray.100">SORT BY</Box>
         </Box>
         <Box
           // width="75%"
@@ -311,43 +311,47 @@ const MenPage = () => {
           mt="20px"
         >
           {filteredData.map((el) => (
-            <Box
-              justifyContent="center"
-              textAlign="center"
-              _hover={{
-                transform: "scale(1.01)",
-              }}
-            >
-              {/* css={{ 
-            boxShadow: "10px 10px 5px 0px rgba(0,0,0,0.75)" 
-          }} */}
-              <Image
-                src={el.image}
-                alt="not found"
-                _hover={{
-                  transform: "scale(1.01)",
-                }}
-              />
-              {/* <Flex justifyContent="center" textAlign="center"> */}
-              <Text mt="0" mb="0">
-                Brand : {el.brand}
-              </Text>
-              <Text mt="0" mb="0">
-                Discount : {el.discount}
-              </Text>
-              <Text mt="0" mb="0">
-                Offer Price : {el.offer_prices}
-              </Text>
-
-              {/* </Flex> */}
-              <Box mt="10px">
-              <Button onClick={()=>handleClick(el.id)}  >
-                    {el.quantity === 0
-                      ? "Add to cart"
-                      : "Remove from cart"}{" "}
-                  </Button>
-              </Box>
-            </Box>
+             <Box key={el.id} >
+             <Image src={el.image} alt="image not found" />
+             <Text textColor={"#B19975"} as="b">
+               {el.brand}
+             </Text>
+             <Text> {el.name}</Text>
+             <Box
+               display={"flex"}
+               justifyContent="center"
+               alignItems={"baseline"}
+               gap={"1"}
+             >
+               <Text as="b" textColor={"gray.600"}>
+                 {" "}
+                 {el.price}
+               </Text>
+               <Text
+                 textDecoration={"line-through"}
+                 fontSize="sm"
+                 textColor={"gray.600"}
+               >
+                 {" "}
+                 {el.orginal_price}
+               </Text>
+               <Text
+                 textColor={"#B19975"}
+                 fontSize="sm"
+               >{` (${el.discount}% off)`}</Text>
+             </Box>
+             <Text textColor={"#3AB649"} fontSize="smaller" as="b">
+               {" "}
+               Offer price ₹{el.offer_prices}
+             </Text>
+             <Box  >
+               <Button onClick={()=>handleClick(el.id)}  >
+                 {el.quantity === 0
+                   ? "Add to cart"
+                   : "Remove from cart"}{" "}
+               </Button>
+             </Box>
+           </Box>
           ))}
         </Box>
       </Box>
