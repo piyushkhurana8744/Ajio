@@ -78,8 +78,8 @@ const Women = () => {
         <Divider />
         <Text marginTop={"1"}>Category</Text>
         <RadioGroup
-          // onChange={setCategory}
-          // value={category}
+          onChange={setCategory}
+          value={category}
           marginLeft="3"
           marginTop={"1"}
         >
@@ -269,7 +269,7 @@ const Women = () => {
           </Box>
           <Box display={"flex"} gap="5"  >
             <Box minWidth={'fit-content'}  >
-            <Text>SORT BY</Text>
+            <Text style={{color:"yellow"}}>SORT Y</Text>
             </Box>
             <Select size='xs'   >
               <option  value={"price"}>Price(lowest first)</option>
