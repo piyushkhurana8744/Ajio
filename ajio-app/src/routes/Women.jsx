@@ -269,7 +269,7 @@ const Women = () => {
           </Box>
           <Box display={"flex"} gap="5"  >
             <Box minWidth={'fit-content'}  >
-            <Text style={{color:"yellow"}}>SORT Y</Text>
+            <Text>SORT BY</Text>
             </Box>
             <Select size='xs'   >
               <option  value={"price"}>Price(lowest first)</option>
