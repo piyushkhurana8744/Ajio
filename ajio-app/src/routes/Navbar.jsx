@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import "../styles/Navbar.css";
+import "../styles/Navbar.css"
 export default function Navbar2() {
     let x = useSelector((data) => {
         return data.isAuth;
@@ -45,8 +45,8 @@ export default function Navbar2() {
                 <div></div>
                 <div style={{ backgroundColor: "black" }}><Link to="" style={{ textDecoration: "none", color: "black", fontFamily: "SourceSansPro", fontSize: "12px", color: "#fff" }}>Vist AJIOLUXE</Link></div>
                 <div><Link to="/contact" style={{ textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px" }}>Contact Us</Link></div>
-                <div style={{ marginTop: "3px", textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px", cursor: "pointer" }}> 
-                Sign In</div>
+                <div style={{ marginTop: "3px", textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px", cursor: "pointer" }}>
+                    Sign In</div>
                 <div><Link to="" style={{ textDecoration: "none", color: "#3E5060", fontFamily: "SourceSansPro", fontSize: "12px" }}>My Account</Link></div>
 
             </div>
