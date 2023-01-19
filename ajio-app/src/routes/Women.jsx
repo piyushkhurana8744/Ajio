@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import Sidebar from "../components/Sidebar";
+import SidebarLarge from '../components/SidebarLarge';
 import {
   Box,
   Image,
@@ -10,17 +11,15 @@ import {
   Select,
   Divider,
   Button,
+  HStack
 } from "@chakra-ui/react";
 
 const Women = () => {
-  const { category, minPrice, maxPrice, maxDiscount, minDiscount } =
-    React.useContext(SidebarContext);
+  const { category, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
 
   const [data, setData] = React.useState([]);
   const [grid, setGrid] = React.useState(3);
   const [cartItems, setCartItems] = React.useState(0);
-  const [sortBy, setSortBy] = React.useState("");
-  const [orderBy, setOrderBy] = React.useState("");
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   const detectWidth = () => {
@@ -29,7 +28,7 @@ const Women = () => {
 
   const getData = async () => {
     let res = await axios.get(
-      `http://localhost:8080/data?category=${category}&offer_prices_gte=${minPrice}&offer_prices_lte=${maxPrice}&discount_gte=${minDiscount}&discount_lte=${maxDiscount}&_sort=${sortBy}&_order=${orderBy}`
+      `http://localhost:8080/data?category=${category}&offer_prices_gte=${minPrice}&offer_prices_lte=${maxPrice}&discount_gte=${minDiscount}&discount_lte=${maxDiscount}`
     );
     setData(res.data);
   };
@@ -56,7 +55,7 @@ const Women = () => {
     });
   };
 
-  const handleChange = () => {};
+ 
 
   React.useEffect(() => {
     window.addEventListener("resize", detectWidth);
@@ -73,18 +72,17 @@ const Women = () => {
     minDiscount,
     grid,
     cartItems,
-    sortBy,
-    orderBy,
   ]);
 
   return (
     <Box
       width={{ xl: "90%", "2xl": "85%" }}
       margin="auto"
-      display={"flex"}
+      // display={"flex"}
       gap="3"
     >
-      <Box margin="auto">
+      {windowWidth > 1000 ? <SidebarLarge /> : null}
+        <Box margin="auto" marginLeft={windowWidth > 1000 ? '260px' : "0px"} >
         <Text as={"b"} fontSize="4xl">
           Clothing
         </Text>
@@ -95,7 +93,7 @@ const Women = () => {
           justifyContent="space-between"
           bg={"whitesmoke"}
         >
-          <Sidebar />
+          {windowWidth < 1000 ? <Sidebar /> : null}
           <Box>
             {windowWidth <= 1000 ? null : (
               <Box display={"flex"} gap="5">
@@ -163,18 +161,8 @@ const Women = () => {
               </Box>
             )}
           </Box>
-          <Box display={"flex"} gap="5">
-            <Box minWidth={"fit-content"}>
-              <Text>SORT BY</Text>
-            </Box>
-            <Select size="xs" width={'fit-content'} value={sortBy} onChange={setSortBy}>
-              <option value={"price"}>Price</option>
-              <option value={"discount"}>Discount</option>
-            </Select>
-            <Select size="xs" width={'fit-content'} value={orderBy} onChange={setOrderBy }>
-              <option value={"asc"}>Lowest first</option>
-              <option value={"desc"}>Highest first</option>
-            </Select>
+          <Box >
+            <Text> Total Products : {data.length} </Text>
           </Box>
         </Box>
 
