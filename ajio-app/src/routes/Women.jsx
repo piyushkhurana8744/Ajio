@@ -81,7 +81,7 @@ const Women = () => {
       // display={"flex"}
       gap="3"
     >
-      {windowWidth > 1000 ? <SidebarLarge /> : null}
+      {windowWidth > 1000 ? <SidebarLarge all={"women-clothing"} firstpart={"saree"} second={"shirts-tops-tunics"} third={"kurta-kurti"} fourth={"kurta-suit-sets"}/> : null}
         <Box margin="auto" marginLeft={windowWidth > 1000 ? '260px' : "0px"} >
         <Text as={"b"} fontSize="4xl">
           Clothing

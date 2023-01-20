@@ -1,9 +1,9 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 export const SidebarContext = React.createContext();
 
 export default function SidebarContextProvider({children}) {
-
   const [category, setCategory] = React.useState("women-clothing");
   const [minPrice, setMinPrice] = React.useState("1");
   const [maxPrice, setMaxPrice] = React.useState("9999");

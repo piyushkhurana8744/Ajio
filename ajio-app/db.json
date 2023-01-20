@@ -4064,7 +4064,7 @@
       "price": "₹535",
       "original_price": "₹1,049",
       "discount": 49,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "525",
       "id": 339
@@ -4077,7 +4077,7 @@
       "price": "₹77",
       "original_price": "₹129",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "77",
       "id": 340
@@ -4090,7 +4090,7 @@
       "price": "₹77",
       "original_price": "₹129",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "77",
       "id": 341
@@ -4103,7 +4103,7 @@
       "price": "₹504",
       "original_price": "₹1,049",
       "discount": 52,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "302",
       "id": 342
@@ -4129,7 +4129,7 @@
       "price": "₹299",
       "original_price": "₹499",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "250",
       "id": 344
@@ -4181,7 +4181,7 @@
       "price": "₹637",
       "original_price": "₹1,099",
       "discount": 42,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "465",
       "id": 348
@@ -4220,7 +4220,7 @@
       "price": "₹107",
       "original_price": "₹179",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "90",
       "id": 351
@@ -4242,7 +4242,7 @@
       "price": "₹179",
       "original_price": "₹299",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "150",
       "id": 353
@@ -4294,7 +4294,7 @@
       "price": "₹504",
       "original_price": "₹1,049",
       "discount": 52,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "302",
       "id": 357
@@ -4320,7 +4320,7 @@
       "price": "₹717",
       "original_price": "₹1,629",
       "discount": 56,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "430",
       "id": 359
@@ -4333,7 +4333,7 @@
       "price": "₹735",
       "original_price": "₹1,499",
       "discount": 51,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "510",
       "id": 360
@@ -4346,7 +4346,7 @@
       "price": "₹694",
       "original_price": "₹1,309",
       "discount": 47,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "416",
       "id": 361
@@ -4372,7 +4372,7 @@
       "price": "₹524",
       "original_price": "₹749",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "487",
       "id": 363
@@ -4385,7 +4385,7 @@
       "price": "₹900",
       "original_price": "₹1,799",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "720",
       "id": 364
@@ -4437,7 +4437,7 @@
       "price": "₹1,250",
       "original_price": "₹2,499",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,250",
       "id": 368
@@ -4450,7 +4450,7 @@
       "price": "₹950",
       "original_price": "₹1,899",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "855",
       "id": 369
@@ -4463,7 +4463,7 @@
       "price": "₹500",
       "original_price": "₹999",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "440",
       "id": 370
@@ -4476,7 +4476,7 @@
       "price": "₹500",
       "original_price": "₹999",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "440",
       "id": 371
@@ -4489,7 +4489,7 @@
       "price": "₹655",
       "original_price": "₹1,259",
       "discount": 48,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "393",
       "id": 372
@@ -4502,7 +4502,7 @@
       "price": "₹101",
       "original_price": "₹169",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "85",
       "id": 373
@@ -4515,7 +4515,7 @@
       "price": "₹980",
       "original_price": "₹2,279",
       "discount": 57,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "588",
       "id": 374
@@ -4567,7 +4567,7 @@
       "price": "₹489",
       "original_price": "₹699",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "454",
       "id": 378
@@ -4580,7 +4580,7 @@
       "price": "₹1,617",
       "original_price": "₹3,299",
       "discount": 51,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,188",
       "id": 379
@@ -4671,7 +4671,7 @@
       "price": "₹1,075",
       "original_price": "₹2,150",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "968",
       "id": 386
@@ -4684,7 +4684,7 @@
       "price": "₹699",
       "original_price": "₹999",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "649",
       "id": 387
@@ -4736,7 +4736,7 @@
       "price": "₹1,274",
       "original_price": "₹2,499",
       "discount": 49,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,274",
       "id": 391
@@ -4762,7 +4762,7 @@
       "price": "₹1,720",
       "original_price": "₹3,999",
       "discount": 57,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,032",
       "id": 393
@@ -4814,7 +4814,7 @@
       "price": "₹420",
       "original_price": "₹1,399",
       "discount": 70,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "392",
       "id": 397
@@ -4840,7 +4840,7 @@
       "price": "₹1,374",
       "original_price": "₹2,499",
       "discount": 45,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,374",
       "id": 399
@@ -4853,7 +4853,7 @@
       "price": "₹640",
       "original_price": "₹1,999",
       "discount": 68,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "640",
       "id": 400
@@ -4866,7 +4866,7 @@
       "price": "₹2,000",
       "original_price": "₹3,999",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "2,000",
       "id": 401
@@ -4897,12 +4897,13 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/mom-s-love-zip-front-hoodie--joggers-set/p/469380677_rust",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221229/V6qL/63adbdbfaeb269659c166f50/mom%27s_love_navy_blue_zip-front_hoodie_%26_joggers_set.jpg",
       "brand": "MOM'S LOVE",
       "name": "Zip-Front Hoodie & Joggers Set",
       "price": "₹699",
       "original_price": "₹999",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "649",
       "id": 404
@@ -4962,19 +4963,20 @@
       "price": "₹209",
       "original_price": "₹349",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "175",
       "id": 409
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/gap-kids-arch-logo-embroidered-sherpa-lined-hoodie/p/441589798_navy",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221208/HQqK/6391fb20aeb269659cde8573/-473Wx593H-441589798-navy-MODEL.jpg",
       "brand": "Gap Kids",
       "name": "Arch Logo Embroidered Sherpa-Lined Hoodie",
       "price": "₹2,099",
       "original_price": "₹2,799",
       "discount": 25,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "2,099",
       "id": 410
@@ -5019,7 +5021,7 @@
       "price": "₹699",
       "original_price": "₹999",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "649",
       "id": 414
@@ -5058,7 +5060,7 @@
       "price": "₹608",
       "original_price": "₹1,899",
       "discount": 68,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "608",
       "id": 417
@@ -5071,7 +5073,7 @@
       "price": "₹359",
       "original_price": "₹599",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "300",
       "id": 418
@@ -5084,7 +5086,7 @@
       "price": "₹1,250",
       "original_price": "₹2,499",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,250",
       "id": 419
@@ -5110,7 +5112,7 @@
       "price": "₹83",
       "original_price": "₹139",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "83",
       "id": 421
@@ -5123,7 +5125,7 @@
       "price": "₹83",
       "original_price": "₹139",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "83",
       "id": 422
@@ -5142,12 +5144,13 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/u-s-polo-assn-zip-front-hoodie-with-brand-taping/p/469248711_red",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221215/cZVQ/639a3e69f997ddfdbdd566d4/-473Wx593H-465440981-yellow-MODEL.jpg",
       "brand": "U.S. Polo Assn.",
       "name": "Zip-Front Hoodie with Brand Taping",
       "price": "₹1,150",
       "original_price": "₹2,299",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Hoodie",
       "quantity": 0,
       "offer_prices": "1,150",
       "id": 424
@@ -5159,7 +5162,7 @@
       "price": "₹646",
       "original_price": "₹1,899",
       "discount": 66,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "646",
       "id": 425
@@ -5219,7 +5222,7 @@
       "price": "₹699",
       "original_price": "₹999",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "649",
       "id": 430
@@ -5231,7 +5234,7 @@
       "price": "₹1,250",
       "original_price": "₹2,499",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,250",
       "id": 431
@@ -5250,28 +5253,18 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/indian-terrain-boys-mid-wash-regular-fit-jogger-jeans/p/441210724_blue",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20220712/D3qY/62cd8790f997dd03e2cf2d23/-473Wx593H-441140822-olive-MODEL.jpg",
       "brand": "INDIAN TERRAIN BOYS",
       "name": "Mid-Wash Regular Fit Jogger Jeans",
       "price": "₹800",
       "original_price": "₹1,599",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "704",
       "id": 433
     },
-    {
-      "rilrtl-products-list__link href": "https://www.ajio.com/fort-collins-zip-front-bomber-jacket/p/469231576_olive",
-      "brand": "Fort Collins",
-      "name": "Zip-Front Bomber Jacket",
-      "price": "₹646",
-      "original_price": "₹1,899",
-      "discount": 66,
-      "category": "kids-clothing",
-      "quantity": 0,
-      "offer_prices": "646",
-      "id": 434
-    },
+    
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/aj-dezines-embellished-sherwani-set-with-bow/p/465378973_navy",
       "brand": "AJ DEZINES",
@@ -5335,13 +5328,14 @@
       "price": "₹1,250",
       "original_price": "₹2,499",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,250",
       "id": 440
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/mom-s-love-colourblock-hoodie--joggers-set/p/469380675_lightgreen",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221130/i9Ry/63876a76aeb269659cc3e464/-473Wx593H-469344661-fuschia-MODEL.jpg",
       "brand": "MOM'S LOVE",
       "name": "Colourblock Hoodie & Joggers Set",
       "price": "₹699",
@@ -5366,18 +5360,20 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/tigertrail-mid-wash-straight-fit-jeans/p/420280649_darkblue",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20220712/MbPt/62cd8948aeb26921af75ad10/-473Wx593H-441145718-blue-MODEL.jpg",
       "brand": "TIGERTRAIL",
       "name": "Mid-Wash Straight Fit Jeans",
       "price": "₹299",
       "original_price": "₹499",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "250",
       "id": 443
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/game-begins-zip-front-hoodie-with-ribbed-hems/p/469344621_olive",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221128/eWE6/6384e29ef997ddfdbda390e2/-473Wx593H-469407387-navy-MODEL.jpg",
       "brand": "GAME BEGINS",
       "name": "Zip-Front Hoodie with Ribbed Hems",
       "price": "₹450",
@@ -5414,6 +5410,7 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/u-s-polo-assn-zip-front-hoodie-with-brand-taping/p/469248712_green",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221216/1Jj6/639b77d0aeb269659cedb1d1/-473Wx593H-469311929-red-MODEL.jpg",
       "brand": "U.S. Polo Assn.",
       "name": "Zip-Front Hoodie with Brand Taping",
       "price": "₹1,172",
@@ -5438,6 +5435,7 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/j--jp-colourblock-ribbed-hems-hoodie/p/465495563_red",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20220920/ynGm/6329df5baeb269dbb3982317/-473Wx593H-441589848-purple-MODEL.jpg",
       "brand": "J & JP",
       "name": "Colourblock Ribbed Hems Hoodie",
       "price": "₹450",
@@ -5450,6 +5448,7 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/u-s-polo-assn-zip-front-hoodie-with-split-kangaroo-pockets/p/469248704_white",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221118/aXar/63779cacaeb269659c9c49b6/-473Wx593H-469240540-blue-MODEL.jpg",
       "brand": "U.S. Polo Assn.",
       "name": "Zip-Front Hoodie with Split-Kangaroo Pockets",
       "price": "₹1,218",
@@ -5462,6 +5461,7 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/mom-s-love-round-eyes-hoodie--joggers-set/p/469380695_butter",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221219/ClVm/63a0a801f997ddfdbddf01ed/-473Wx593H-465454159-black-MODEL.jpg",
       "brand": "MOM'S LOVE",
       "name": "Round Eyes Hoodie & Joggers Set",
       "price": "₹699",
@@ -5474,12 +5474,13 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/tigertrail-lightly-washed-jeans-with-whiskers/p/420280650_blue",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20230105/V0Lx/63b6aa8bf997ddfdbd15c973/-473Wx593H-420280650-blue-MODEL.jpg",
       "brand": "TIGERTRAIL",
       "name": "Lightly Washed Jeans with Whiskers",
       "price": "₹299",
       "original_price": "₹499",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "250",
       "id": 452
@@ -5491,23 +5492,12 @@
       "price": "₹604",
       "original_price": "₹1,099",
       "discount": 45,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "441",
       "id": 453
     },
-    {
-      "rilrtl-products-list__link href": "https://www.ajio.com/u-s-polo-assn-zip-front-hoodie-with-insert-pockets/p/469257865_blue",
-      "brand": "U.S. Polo Assn.",
-      "name": "Zip-Front Hoodie with Insert Pockets",
-      "price": "₹1,225",
-      "original_price": "₹2,499",
-      "discount": 51,
-      "category": "kids-clothing",
-      "quantity": 0,
-      "offer_prices": "1,225",
-      "id": 454
-    },
+    
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/antix-printed-top--shorts-set/p/420277983_lgtpink",
       "brand": "ANTIX",
@@ -5587,7 +5577,7 @@
       "price": "₹2,039",
       "original_price": "₹3,999",
       "discount": 49,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "2,039",
       "id": 461
@@ -5599,19 +5589,20 @@
       "price": "₹120",
       "original_price": "₹599",
       "discount": 80,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "120",
       "id": 462
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/kidderz-mid-wash-mid-rise-jeans/p/420174043_blue",
+      "image":"https://assets.ajio.com/medias/sys_master/root/20221230/HCw4/63aecf26f997ddfdbd04dcf0/-473Wx593H-420174187-black-MODEL.jpg",
       "brand": "KIDDERZ",
       "name": "Mid-Wash Mid-Rise Jeans",
       "price": "₹359",
       "original_price": "₹599",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "300",
       "id": 463
@@ -5654,10 +5645,12 @@
     },
     {
       "rilrtl-products-list__link href": "https://www.ajio.com/kb-team-spirit-shirt-with-patch-pocket/p/443001893_red",
+      "image": "https://assets.ajio.com/medias/sys_master/root/20221209/YpnK/63935c8ef997ddfdbdca98d0/yb_dnmx_navy_blue_%26_yellow_colourblock_polo_t-shirt_with_spread_collar.jpg",
       "brand": "KB TEAM SPIRIT",
       "name": "Shirt with Patch Pocket",
       "price": "₹549",
       "offer_prices": "494",
+      "category": "T-shirt",
       "id": 467
     },
     {
@@ -5668,7 +5661,7 @@
       "price": "₹392",
       "original_price": "₹799",
       "discount": 51,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "272",
       "id": 468
@@ -5681,7 +5674,7 @@
       "price": "₹299",
       "original_price": "₹499",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "250",
       "id": 469
@@ -5759,7 +5752,7 @@
       "price": "₹2,364",
       "original_price": "₹4,299",
       "discount": 45,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "2,364",
       "id": 475
@@ -5785,7 +5778,7 @@
       "price": "₹899",
       "original_price": "₹999",
       "discount": 10,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "899",
       "id": 477
@@ -5798,7 +5791,7 @@
       "price": "₹627",
       "original_price": "₹1,899",
       "discount": 67,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "627",
       "id": 478
@@ -5837,7 +5830,7 @@
       "price": "₹107",
       "original_price": "₹179",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "90",
       "id": 481
@@ -5876,7 +5869,7 @@
       "price": "₹580",
       "original_price": "₹1,159",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "348",
       "id": 484
@@ -5967,7 +5960,7 @@
       "price": "₹179",
       "original_price": "₹299",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "150",
       "id": 491
@@ -5977,6 +5970,7 @@
       "image": "https://assets.ajio.com/medias/sys_master/root/20221207/pS8m/6390a7bdf997ddfdbdc52495/lee_cooper_jet_black_mid-rise_slim_fit_jeans.jpg",
       "brand": "Lee Cooper",
       "name": "Mid-Rise Slim Fit Jeans",
+      "category": "Jeans",
       "price": "₹1,199",
       "offer_prices": "1,079",
       "id": 492
@@ -5989,7 +5983,7 @@
       "price": "₹1,020",
       "original_price": "₹2,999",
       "discount": 66,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "750",
       "id": 493
@@ -6002,7 +5996,7 @@
       "price": "₹299",
       "original_price": "₹499",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "179",
       "id": 494
@@ -6015,7 +6009,7 @@
       "price": "₹680",
       "original_price": "₹1,699",
       "discount": 60,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "578",
       "id": 495
@@ -6028,7 +6022,7 @@
       "price": "₹588",
       "original_price": "₹1,199",
       "discount": 51,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "408",
       "id": 496
@@ -6041,7 +6035,7 @@
       "price": "₹1,459",
       "original_price": "₹1,999",
       "discount": 27,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "1,339",
       "id": 497
@@ -6054,7 +6048,7 @@
       "price": "₹1,020",
       "original_price": "₹2,999",
       "discount": 66,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "750",
       "id": 498
@@ -6093,7 +6087,7 @@
       "price": "₹2,150",
       "original_price": "₹4,299",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "2,150",
       "id": 501
@@ -6106,7 +6100,7 @@
       "price": "₹120",
       "original_price": "₹599",
       "discount": 80,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "120",
       "id": 502
@@ -6119,7 +6113,7 @@
       "price": "₹700",
       "original_price": "₹1,749",
       "discount": 60,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "437",
       "id": 503
@@ -6132,7 +6126,7 @@
       "price": "₹524",
       "original_price": "₹749",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "T-shirt",
       "quantity": 0,
       "offer_prices": "487",
       "id": 504
@@ -6158,7 +6152,7 @@
       "price": "₹559",
       "original_price": "₹799",
       "discount": 30,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "400",
       "id": 506
@@ -6197,7 +6191,7 @@
       "price": "₹359",
       "original_price": "₹599",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "300",
       "id": 509
@@ -6262,7 +6256,7 @@
       "price": "₹2,000",
       "original_price": "₹3,999",
       "discount": 50,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "2,000",
       "id": 514
@@ -6275,7 +6269,7 @@
       "price": "₹1,725",
       "original_price": "₹2,875",
       "discount": 40,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "1,052",
       "id": 515
@@ -6288,7 +6282,7 @@
       "price": "₹608",
       "original_price": "₹1,899",
       "discount": 68,
-      "category": "kids-clothing",
+      "category": "Jacket",
       "quantity": 0,
       "offer_prices": "608",
       "id": 516
@@ -6299,6 +6293,7 @@
       "brand": "Gap Kids",
       "name": "Mid-Wash Straight Fit Jeans",
       "price": "₹1,499",
+      "category":"Jeans",
       "offer_prices": "1,124",
       "id": 517
     },
@@ -6309,6 +6304,7 @@
       "name": "Mid-Wash Straight Fit Jeans",
       "price": "₹599",
       "offer_prices": "539",
+      "category":"Jeans",
       "id": 518
     },
     {
@@ -6419,7 +6415,7 @@
       "price": "₹420",
       "original_price": "₹1,399",
       "discount": 70,
-      "category": "kids-clothing",
+      "category": "Jeans",
       "quantity": 0,
       "offer_prices": "392",
       "id": 527
