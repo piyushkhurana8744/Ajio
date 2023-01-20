@@ -22,7 +22,7 @@ const Women = () => {
   const [cartItems, setCartItems] = React.useState(0);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-  const setPage = () => {
+  window.onload =  function (){
     if(window.location.href === "http://localhost:3000/women"){
       setCategory(prev => prev = "women-clothing");
     }
@@ -71,7 +71,7 @@ const Women = () => {
   
 
   React.useEffect(() => {
-    setPage();
+
     window.addEventListener("resize", detectWidth);
     getData();
 
