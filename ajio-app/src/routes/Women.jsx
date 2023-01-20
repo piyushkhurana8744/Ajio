@@ -15,12 +15,24 @@ import {
 } from "@chakra-ui/react";
 
 const Women = () => {
-  const { category, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
+  const { category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
 
   const [data, setData] = React.useState([]);
   const [grid, setGrid] = React.useState(3);
   const [cartItems, setCartItems] = React.useState(0);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  const setPage = () => {
+    if(window.location.href === "http://localhost:3000/women"){
+      setCategory(prev => prev = "women-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/men"){
+      setCategory(prev => prev = "men-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/kids"){
+      setCategory(prev => prev = "kids-clothing");
+    }
+  }
 
   const detectWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -56,8 +68,10 @@ const Women = () => {
   };
 
  
+  
 
   React.useEffect(() => {
+    setPage();
     window.addEventListener("resize", detectWidth);
     getData();
 

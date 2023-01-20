@@ -28,6 +28,9 @@ const MenPage = () => {
   const [cartItems, setCartItems] = React.useState(0);
   const [selectedCategories, setSelectedCategories] = React.useState([]);
 
+
+  
+
   const [sortBy, setSortBy] = React.useState("");
   const [orderBy, setOrderBy] = React.useState("");
 
