@@ -11,6 +11,8 @@ const MenPage = () => {
   const [minPrice, setMinPrice] = React.useState("1");
   const [maxPrice, setMaxPrice] = React.useState("9999");
 
+  
+
 
   const ApiFetch = async() => {
    await axios.get("http://localhost:8080/data").then((res) => {
