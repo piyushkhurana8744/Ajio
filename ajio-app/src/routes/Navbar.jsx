@@ -226,11 +226,12 @@ export default function Navbar2() {
               fontFamily: "SourceSansPro",
               fontSize: "12px",
             }}
-          >
+            >
             Contact Us
           </Link>
         </div>
-        <div
+        <div>
+        <Link to="/Signup"
           style={{
             marginTop: "3px",
             textDecoration: "none",
@@ -240,7 +241,22 @@ export default function Navbar2() {
             cursor: "pointer",
           }}
         >
-          Sign In
+          Sign Up
+        </Link>
+        </div>
+        <div>
+        <Link to="/Login"
+          style={{
+            marginTop: "3px",
+            textDecoration: "none",
+            color: "#3E5060",
+            fontFamily: "SourceSansPro",
+            fontSize: "12px",
+            cursor: "pointer",
+          }}
+        >
+          Login
+        </Link>
         </div>
         <div>
           <Link
