@@ -327,7 +327,7 @@ const MenPage = () => {
           {data.map((el) => {
             return (
               <Box key={el.id}>
-                <Image src={el.image} alt="image not found" />
+                <Link  to={`/men/${el.id}`}><Image className="singleImageMain" src={el.image} alt="image not found" /></Link> 
                 <Text textColor={"#B19975"} as="b">
                   {el.brand}
                 </Text>
