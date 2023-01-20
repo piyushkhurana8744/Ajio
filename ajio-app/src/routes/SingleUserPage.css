@@ -1,0 +1,33 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination {
+    display: flex;
+  }
+  
+  .pagination-item {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d9d9d9;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .pagination-item:hover {
+    background-color: green;
+  }
+  
+  .pagination-item.active {
+    background-color: #1890ff;
+    color: #fff;
+  }
+  .singleImage:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
+  
