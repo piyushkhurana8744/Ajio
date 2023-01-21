@@ -29,7 +29,7 @@ export default function SignupCard() {
     
       let user = {username:username , password:password};
       localStorage.setItem("user", JSON.stringify(user));
-      window.location.href = "/";
+      window.location.href = "/Login";
       console.log(user);
   }
   
@@ -100,7 +100,7 @@ export default function SignupCard() {
                 bg={'yellow.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500',
+                  bg: 'yellow.500',
                 }} type="button" onClick={handleSignup}>
                 Sign up
               </Button>
