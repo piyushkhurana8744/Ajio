@@ -6,7 +6,9 @@ import Navbar from './Navbar';
 import {Box} from '@chakra-ui/react'
 import HomePage from './HomePage';
 import Kidspage from './Kidspage';
-// import SignupPage from './SignupPage';
+import Signup from './Signup';
+import Login from './Login';
+import SingleUserPage from './SingleUserPage';
 const AllRoutes = () => {
   return (
     <div>
@@ -17,7 +19,11 @@ const AllRoutes = () => {
             <Route path='/women' element={<Women />} />
             <Route path='/men' element={<MenPage />} />
             <Route path="/kids" element={<Kidspage />}></Route>
-            {/* <Route path='/sign' element={<SignupPage/>}/> */}
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/men/:id' element={<SingleUserPage/>} />
+            <Route path='/women/:id' element={<SingleUserPage/>} />
+            <Route path='/kids/:id' element={<SingleUserPage/>} />
         </Routes>
         </Box>
       

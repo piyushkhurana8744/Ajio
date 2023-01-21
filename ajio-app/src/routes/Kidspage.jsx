@@ -1,91 +1,242 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import Refindedby from "../components/Refindedby";
-import { Text, Box, Flex, Center,Grid ,Input,Select,Image,GridItem,Button, grid} from "@chakra-ui/react";
-import axios from "axios"
-const Kidspage = () => {
-    const [product,setProduct]=useState([])
-    const [grid,setGrid]=useState(3)
-    const getData=async()=>{
-        let res=await axios.get(`http://localhost:8080/data?category=kids-clothing`)
-        setProduct(res.data)
-    }
+import React from "react";
+import axios from "axios";
+import { SidebarContext } from "../context/SidebarContextProvider";
+import Sidebar from "../components/Sidebar";
+import SidebarLarge from '../components/SidebarLarge';
+import { Link } from "react-router-dom";
+import {
+  Box,
+  Image,
+  Grid,
+  Text,
+  Select,
+  Divider,
+  Button,
+  HStack
+} from "@chakra-ui/react";
 
-    useEffect(()=>{
-       getData()
-    },[])
-    console.log(product)
+const Women = () => {
+  const { category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
+   
+  const [data, setData] = React.useState([]);
+  const [grid, setGrid] = React.useState(3);
+  const [cartItems, setCartItems] = React.useState(0);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  window.onload = function () {
+    if(window.location.href === "http://localhost:3000/women"){
+      setCategory(prev => prev = "women-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/men"){
+      setCategory(prev => prev = "men-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/kids"){
+      setCategory(prev => prev = "kids-clothing");
+    }
+  }
+
+  const detectWidth = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  const getData = async () => {
+    let res = await axios.get(
+      `http://localhost:8080/data?category=${category}&offer_prices_gte=${minPrice}&offer_prices_lte=${maxPrice}&discount_gte=${minDiscount}&discount_lte=${maxDiscount}`
+    );
+    setData(res.data);
+  };
+
+  const handleAddToCart = async (id) => {
+    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+      quantity: 1,
+    });
+    setCartItems((prev) => prev + 1);
+  };
+
+  const handleRemoveFromCart = async (id) => {
+    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+      quantity: 0,
+    });
+    setCartItems((prev) => prev - 1);
+  };
+
+  const handleClick = (id) => {
+    data.forEach((elem) => {
+      if (elem.id === id) {
+        elem.quantity === 0 ? handleAddToCart(id) : handleRemoveFromCart(id);
+      }
+    });
+  };
+
+ 
+  
+
+  React.useEffect(() => {
+
+    window.addEventListener("resize", detectWidth);
+    getData();
+
+    return () => window.removeEventListener("resize", detectWidth);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    windowWidth,
+    category,
+    minPrice,
+    maxPrice,
+    maxDiscount,
+    minDiscount,
+    grid,
+    cartItems,
+  ]);
+
   return (
-    <div>
-      <Navbar />
-      <Flex width={"90%"} margin="auto" marginTop="40px" gap="50px">
-        <Box width="20%">
-         <Refindedby />
+    <Box
+      width={{ xl: "90%", "2xl": "85%" }}
+      margin="auto"
+      // display={"flex"}
+      gap="3"
+    >
+      {windowWidth > 1000 ? <SidebarLarge all={"kids-clothing"} firstpart={"T-shirt"} second={"Jacket"} third={"Jeans"} fourth={"Hoodie"}/> : null}
+        <Box margin="auto" marginLeft={windowWidth > 1000 ? '260px' : "0px"} >
+        <Text as={"b"} fontSize="4xl">
+          Clothing
+        </Text>
+        <Divider marginBottom={"1"} />
+        <Box
+          padding="3"
+          display={"flex"}
+          justifyContent="space-between"
+          bg={"whitesmoke"}
+        >
+          {windowWidth < 1000 ? <Sidebar /> : null}
+          <Box>
+            {windowWidth <= 1000 ? null : (
+              <Box display={"flex"} gap="5">
+                <Text>GRID</Text>
+                <Box display={"flex"} cursor="pointer">
+                  <Box
+                    border="1px solid gray"
+                    bg="white"
+                    padding={"4px"}
+                    display="flex"
+                    value={3}
+                    onClick={() => setGrid(3)}
+                  >
+                    <Box bg="gray.300" height={"4"} width="2"></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                  </Box>
+
+                  <Box
+                    border="1px solid gray"
+                    borderLeft={"0"}
+                    bg="white"
+                    padding={"4px"}
+                    display="flex"
+                    value={5}
+                    onClick={() => setGrid(5)}
+                  >
+                    <Box bg="gray.300" height={"4"} width="2"></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                    <Box
+                      bg="gray.300"
+                      height={"4"}
+                      width="2"
+                      marginLeft={"4px"}
+                    ></Box>
+                  </Box>
+                </Box>
+              </Box>
+            )}
+          </Box>
+          <Box >
+            <Text> Total Products : {data.length} </Text>
+          </Box>
         </Box>
-        <Box width="80%" >
-            <Center><Text fontSize={"40px"} fontWeight="400">Fresh Arrivals Clothing For Kids</Text></Center>
-            <Flex alignItems={"center"} justifyContent="space-around" borderTop={"1px solid grey"} borderBottom="1px solid grey" padding="10px" backgroundColor={"#f9f9f9"}>
-                <Text fontWeight={"600"}>{product.length} Items Found</Text>
-                <Flex marginLeft={"20px"} alignItems="center" >
-                    <Text>Grid</Text>
-                   <Grid  border="1px solid grey" height="25px" width="44px" alignItems={"center"} gap="4px" templateColumns='repeat(3, 1fr)' marginLeft={"20px"} backgroundColor="#fff" onClick={()=>setGrid(3)}>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                   </Grid>
-                   <Grid  border="1px solid grey" height="25px" width="70px" alignItems={"center"} gap="4px" templateColumns='repeat(5, 1fr)' marginLeft={"5px"} backgroundColor="#fff" onClick={()=>setGrid(5)}>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                    <Box width="10px" backgroundColor={"grey"} height="20px"></Box>
-                   </Grid>
-                </Flex>
-                <Flex alignItems={"center"} gap="20px">
-                    <Box>
-                    <Text color="gray.500" >SORT BY</Text>
-                    </Box>
-                   <Box>
-                   <Select size="md">
-                        <option value="">Relevance</option>
-                        <option value="">Price(lowest first)</option>
-                        <option value="">Price(highest first)</option>
-                        <option value="">Discount</option>
-                    </Select>
-                   </Box>
-                  </Flex>
-            </Flex>
-            <Box marginTop="30px">
-        <Grid templateColumns={`repeat(${grid},1fr)`} gap="5">
-          {product.map((elem) => {
+
+        <Divider marginBottom={"5"} marginTop="1" />
+        <Grid
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+            lg: `repeat(${grid},1fr)`,
+          }}
+          gap="5"
+        >
+          {data.map((elem) => {
             return (
-              <GridItem key={elem.id} lineHeight="30px">
+              <Box key={elem.id}>
                 <Image src={elem.image} alt="image not found" />
-                <Text color="#c7b59b" fontSize="18px" fontWeight={"500"}>{elem.brand}</Text>
-                <Text>{elem.name}</Text>
-                <Flex textAlign={"center"} gap="10px" marginLeft={"80px"}>
-                    <Box>
-                    <Text fontSize={"18px"} fontWeight="600">{elem.price}</Text>
-                    </Box>
-                    <Box>
-                        <Text textDecoration={"line-through"}>{elem.original_price}</Text>
-                    </Box>
-                  <Box>
-                  <Text color="#c7b59b">{`(${elem.discount} %off)`}</Text>
-                  </Box>  
-                </Flex>
-                <Text color="green">Offer Price : {elem.offer_prices}</Text>
-                <Button>Add to Cart</Button>
-              </GridItem>
+                <Text textColor={"#B19975"} as="b">
+                  {elem.brand}
+                </Text>
+                <Link  to={`/men/${elem.id}`}><Text> {elem.name}</Text></Link>
+                <Box
+                  display={"flex"}
+                  justifyContent="center"
+                  alignItems={"baseline"}
+                  gap={"1"}
+                >
+                  <Text as="b" textColor={"gray.600"}>
+                    {" "}
+                    {elem.price}
+                  </Text>
+                  <Text
+                    textDecoration={"line-through"}
+                    fontSize="sm"
+                    textColor={"gray.600"}
+                  >
+                    {" "}
+                    {elem.orginal_price}
+                  </Text>
+                  <Text
+                    textColor={"#B19975"}
+                    fontSize="sm"
+                  >{` (${elem.discount}% off)`}</Text>
+                </Box>
+                <Text textColor={"#3AB649"} fontSize="smaller" as="b">
+                  {" "}
+                  Offer price ₹{elem.offer_prices}
+                </Text>
+                <Box>
+                  <Button onClick={() => handleClick(elem.id)}>
+                    {elem.quantity === 0 ? "Add to cart" : "Remove from cart"}{" "}
+                  </Button>
+                </Box>
+              </Box>
             );
           })}
         </Grid>
-        </Box>
-        </Box>
-        
-      </Flex>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
-export default Kidspage;
+export default Women;

@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import { Box, Text, RadioGroup, Radio, Stack, Divider } from "@chakra-ui/react";
 
-const SidebarLarge = () => {
+const SidebarLarge = ({firstpart,second,third,fourth,all,handleChange}) => {
   const {
     category,
     setCategory,
@@ -17,29 +17,29 @@ const SidebarLarge = () => {
   } = React.useContext(SidebarContext);
 
   return (
-    <Box textAlign="left" width="250px" position={"fixed"} marginTop='24px' >
-      <Text as="b" fontSize={"xl"}>
+    <Box textAlign="left" width="250px" position={"fixed"} marginTop='24px' height="500px">
+      <Text as="b" fontSize={"lg"}>
         Refine By
       </Text>
       <Divider />
-      <Text marginTop={"1"}>Category</Text>
+      <Text >Category</Text>
       <RadioGroup
         onChange={setCategory}
         value={category}
         marginLeft="3"
-        marginTop={"1"}
+        
       >
         <Stack display={"flex"} justifyContent={"left"} fontWeight="hairline">
-          <Radio value="women-clothing">All</Radio>
-          <Radio value="saree">Sarees</Radio>
-          <Radio value="shirts-tops-tunics">Shirts, Tops & Tunics</Radio>
-          <Radio value="kurta-kurti">Kurtas & Kurtis</Radio>
-          <Radio value="kurta-suit-sets">Kurta Suit Sets</Radio>
+          <Radio value={all}>All</Radio>
+          <Radio value={firstpart}>{firstpart}</Radio>
+          <Radio value={second}>{second}</Radio>
+          <Radio value={third}>{third}</Radio>
+          <Radio value={fourth}>{fourth}</Radio>
         </Stack>
       </RadioGroup>
 
       {/* ///////////////////////////////////////////////////////////////////// */}
-      <Divider marginTop={"3"} marginBottom="3" />
+      <Divider   />
       <Text>Price Range</Text>
       <Box
         display={"flex"}
@@ -48,8 +48,8 @@ const SidebarLarge = () => {
         paddingRight="3"
       >
         <Box>
-          <Text marginTop={"1"}>Min Price</Text>
-          <RadioGroup onChange={setMinPrice} value={minPrice} marginTop={"1"}>
+          <Text >Min Price</Text>
+          <RadioGroup onChange={setMinPrice} value={minPrice} >
             <Stack
               display={"flex"}
               justifyContent={"left"}
@@ -64,8 +64,8 @@ const SidebarLarge = () => {
           </RadioGroup>
         </Box>
         <Box>
-          <Text marginTop={"1"}>Max Price</Text>
-          <RadioGroup onChange={setMaxPrice} value={maxPrice} marginTop={"1"}>
+          <Text >Max Price</Text>
+          <RadioGroup onChange={setMaxPrice} value={maxPrice} >
             <Stack
               display={"flex"}
               justifyContent={"left"}
@@ -80,7 +80,7 @@ const SidebarLarge = () => {
           </RadioGroup>
         </Box>
       </Box>
-      <Divider marginTop={"3"} marginBottom="3" />
+      <Divider   />
 
       {/* ///////////////////////////////////////////////////////////////////// */}
       <Text>Discount Range</Text>
@@ -91,11 +91,11 @@ const SidebarLarge = () => {
         paddingRight="3"
       >
         <Box>
-          <Text marginTop={"1"}>Min Discount</Text>
+          <Text >Min Discount</Text>
           <RadioGroup
             onChange={setMinDiscount}
             value={minDiscount}
-            marginTop={"1"}
+            
           >
             <Stack
               display={"flex"}
@@ -111,11 +111,11 @@ const SidebarLarge = () => {
           </RadioGroup>
         </Box>
         <Box>
-          <Text marginTop={"1"}>Max Discount</Text>
+          <Text >Max Discount</Text>
           <RadioGroup
             onChange={setMaxDiscount}
             value={maxDiscount}
-            marginTop={"1"}
+            
           >
             <Stack
               display={"flex"}
@@ -131,7 +131,7 @@ const SidebarLarge = () => {
           </RadioGroup>
         </Box>
       </Box>
-      <Divider marginTop={"3"} marginBottom="3" />
+      <Divider   />
     </Box>
   );
 };

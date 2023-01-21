@@ -3,6 +3,7 @@ import axios from "axios";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import Sidebar from "../components/Sidebar";
 import SidebarLarge from '../components/SidebarLarge';
+import { Link } from "react-router-dom";
 import {
   Box,
   Image,
@@ -15,12 +16,24 @@ import {
 } from "@chakra-ui/react";
 
 const Women = () => {
-  const { category, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
+  const { category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
 
   const [data, setData] = React.useState([]);
   const [grid, setGrid] = React.useState(3);
   const [cartItems, setCartItems] = React.useState(0);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  window.onload =  function (){
+    if(window.location.href === "http://localhost:3000/women"){
+      setCategory(prev => prev = "women-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/men"){
+      setCategory(prev => prev = "men-clothing");
+    }
+    if(window.location.href === "http://localhost:3000/kids"){
+      setCategory(prev => prev = "kids-clothing");
+    }
+  }
 
   const detectWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -56,8 +69,10 @@ const Women = () => {
   };
 
  
+  
 
   React.useEffect(() => {
+
     window.addEventListener("resize", detectWidth);
     getData();
 
@@ -81,7 +96,7 @@ const Women = () => {
       // display={"flex"}
       gap="3"
     >
-      {windowWidth > 1000 ? <SidebarLarge /> : null}
+      {windowWidth > 1000 ? <SidebarLarge all={"women-clothing"} firstpart={"saree"} second={"shirts-tops-tunics"} third={"kurta-kurti"} fourth={"kurta-suit-sets"}/> : null}
         <Box margin="auto" marginLeft={windowWidth > 1000 ? '260px' : "0px"} >
         <Text as={"b"} fontSize="4xl">
           Clothing
@@ -182,7 +197,8 @@ const Women = () => {
                 <Text textColor={"#B19975"} as="b">
                   {elem.brand}
                 </Text>
-                <Text> {elem.name}</Text>
+                
+                <Link  to={`/women/${elem.id}`}><Text> {elem.name}</Text></Link>
                 <Box
                   display={"flex"}
                   justifyContent="center"

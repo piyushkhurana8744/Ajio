@@ -1,0 +1,15 @@
+
+  .grid-container {
+    @media only screen and (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    }
+    }
+      @media only screen and (max-width: 600px) {
+        .refine-by-section {
+          display: none;
+        }
+      }
+      .singleImageMain:hover {
+        transform: scale(1.05);
+        transition: all 0.6s ease;
+      }
