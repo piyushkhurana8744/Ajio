@@ -16,11 +16,10 @@ import {
 } from "@chakra-ui/react";
 
 const Women = () => {
-  const { category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
+  const { cartData, setCartData,cartLength,setCartLength,category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
 
   const [data, setData] = React.useState([]);
   const [grid, setGrid] = React.useState(3);
-  const [cartItems, setCartItems] = React.useState(0);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   window.onload =  function (){
@@ -28,7 +27,7 @@ const Women = () => {
       setCategory(prev => prev = "women-clothing");
     }
     if(window.location.href === "http://localhost:3000/men"){
-      setCategory(prev => prev = "men-clothing");
+      setCategory(prev => prev = "mens-clothing");
     }
     if(window.location.href === "http://localhost:3000/kids"){
       setCategory(prev => prev = "kids-clothing");
@@ -50,14 +49,14 @@ const Women = () => {
     let res = await axios.patch(`http://localhost:8080/data/${id}`, {
       quantity: 1,
     });
-    setCartItems((prev) => prev + 1);
+    setCartLength((prev) => prev + 1);
   };
 
   const handleRemoveFromCart = async (id) => {
     let res = await axios.patch(`http://localhost:8080/data/${id}`, {
       quantity: 0,
     });
-    setCartItems((prev) => prev - 1);
+    setCartLength((prev) => prev - 1);
   };
 
   const handleClick = (id) => {
@@ -86,7 +85,7 @@ const Women = () => {
     maxDiscount,
     minDiscount,
     grid,
-    cartItems,
+    cartLength,
   ]);
 
   return (
@@ -193,10 +192,10 @@ const Women = () => {
           {data.map((elem) => {
             return (
               <Box key={elem.id}>
-                <Image src={elem.image} alt="image not found" />
-                <Text textColor={"#B19975"} as="b">
+                <Link  to={`/men/${elem.id}`}><Image src={elem.image} alt="image not found" /></Link>
+                <Link  to={`/men/${elem.id}`}><Text textColor={"#B19975"} as="b">
                   {elem.brand}
-                </Text>
+                </Text></Link>
                 <Link  to={`/men/${elem.id}`}><Text> {elem.name}</Text></Link>
                 <Box
                   display={"flex"}
@@ -214,7 +213,7 @@ const Women = () => {
                     textColor={"gray.600"}
                   >
                     {" "}
-                    {elem.orginal_price}
+                    {elem.original_price}
                   </Text>
                   <Text
                     textColor={"#B19975"}
