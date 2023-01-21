@@ -55,22 +55,22 @@ const MobileNav = () => {
           <Button size="sm">SignIn</Button>
         </Link>
         <Link to="/cart">
-          <BsFillBagCheckFill style={{ fontSize: "30px" }} />
-        </Link>
+        
         <Box
-          bg="red"
-          // position={"relative"}
+          
           right="20px"
-          width={"1rem"}
+          width={"fit-content"}
           height="1rem"
           display={"flex"}
           alignItems={"center"}
-          borderRadius={"50%"}
+          gap="3"
         >
-          <Text as="b" color={"white"} fontSize={"xs"}>
+          <BsFillBagCheckFill style={{ fontSize: "30px" }} />
+          <Text as="b"  fontSize={"xs"}>
             {cartLength}
           </Text>
         </Box>
+        </Link>
       </Flex>
       <Input
         width="300px"
