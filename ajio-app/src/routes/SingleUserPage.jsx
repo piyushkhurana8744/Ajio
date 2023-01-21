@@ -294,7 +294,7 @@ const SingleUserPage = () => {
           {/* </Box> */}
         </Box>
       </Container>
-      <Footer />
+      
     </Box>
   );
 };
