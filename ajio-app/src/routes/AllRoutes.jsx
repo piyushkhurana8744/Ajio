@@ -9,6 +9,7 @@ import Kidspage from './Kidspage';
 import Signup from './Signup';
 import Login from './Login';
 import SingleUserPage from './SingleUserPage';
+import Querypage from './Querypage';
 const AllRoutes = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const AllRoutes = () => {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/men/:id' element={<SingleUserPage/>} />
+            <Route path='/querypage/:value' element={<Querypage />}></Route>
         </Routes>
         </Box>
       

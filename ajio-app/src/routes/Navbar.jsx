@@ -1,12 +1,22 @@
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {Box,Flex,Text,Image,Input,Button} from "@chakra-ui/react"
 import {BsFillBagCheckFill} from "react-icons/bs"
 import Menuitem from '../components/MenuItem'
 import {Link} from "react-router-dom"
 import { SidebarContext } from '../context/SidebarContextProvider'
+import { Navigate,useNavigate } from 'react-router-dom'
 const Navbar = () => {
     const {setCategory}=useContext(SidebarContext)
+    
+    const navigate = useNavigate()
+    const handleEnter=(e)=>{
+        if(e.key=="Enter"){
+            navigate(`/querypage/${e.target.value}`)
+             
+        }
+        
+    }
   return (
     <div >
       <Flex justifyContent={"space-around"} alignItems={"center"} padding="10px" position={"fixed"} top="0" width="100%" zIndex={"999"} backgroundColor="#fff" >
@@ -311,7 +321,7 @@ const Navbar = () => {
                     </Box>
                     
                 }/></Box>
-            <Box> <Input placeholder={"SEARCH"} borderRadius="20px"></Input></Box>
+            <Box> <Input placeholder={"SEARCH"} borderRadius="20px" onKeyPress={handleEnter}></Input></Box>
             <Link to="/signup"><Box><Button>SIGN IN</Button></Box></Link>
             <BsFillBagCheckFill style={{fontSize:"30px"}}/>
         </Flex>
