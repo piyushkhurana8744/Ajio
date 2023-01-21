@@ -12,8 +12,7 @@ import SingleUserPage from './SingleUserPage';
 const AllRoutes = () => {
   return (
     <div>
-      <Navbar/>
-        <Box marginTop={'90px'} >
+        <Box marginTop={"80px"}>
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
             <Route path='/women' element={<Women />} />

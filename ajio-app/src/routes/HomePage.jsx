@@ -16,7 +16,7 @@ const HomePage = () => {
     const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)')
   return (
     <div>
-        <Box marginTop="100px">
+        <Box>
         <ImageSlider/>
         </Box>
       
@@ -271,7 +271,6 @@ const HomePage = () => {
         <Image src="https://assets.ajio.com/cms/AJIO/WEB/Discover%20Online%20Stores%20(D)111.jpg" width="100%"></Image>
         <Image src="https://assets.ajio.com/cms/AJIO/WEB/08032022-D-unisex-ajiocares-strip%20new%20d.jpg" width="100%"></Image>
     </Box>
-        <Footer />
       <Box>
         
       </Box>
