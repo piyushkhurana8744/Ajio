@@ -5,7 +5,8 @@ import MenPage from './Men';
 import {Box} from '@chakra-ui/react'
 import HomePage from './HomePage';
 import Kidspage from './Kidspage';
-import Signup from './Sign';
+import Signup from './Signup';
+import Login from './Login';
 import SingleUserPage from './SingleUserPage';
 import Cart from './Cart';
 const AllRoutes = () => {
@@ -17,9 +18,16 @@ const AllRoutes = () => {
             <Route path='/women' element={<Women />} />
             <Route path='/men' element={<MenPage />} />
             <Route path="/kids" element={<Kidspage />}></Route>
-            <Route path='/sign' element={<Signup />}/>
+
+            
             <Route path='/cart' element={<Cart />}/>
+
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/login' element={<Login/>}/>
+
             <Route path='/men/:id' element={<SingleUserPage/>} />
+            <Route path='/women/:id' element={<SingleUserPage/>} />
+            <Route path='/kids/:id' element={<SingleUserPage/>} />
         </Routes>
         </Box>
       
