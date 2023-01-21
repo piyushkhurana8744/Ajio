@@ -192,10 +192,10 @@ const Women = () => {
           {data.map((elem) => {
             return (
               <Box key={elem.id}>
-                <Image src={elem.image} alt="image not found" />
-                <Text textColor={"#B19975"} as="b">
+                <Link  to={`/women/${elem.id}`}><Image src={elem.image} alt="image not found" /></Link>
+                <Link  to={`/women/${elem.id}`}><Text textColor={"#B19975"} as="b">
                   {elem.brand}
-                </Text>
+                </Text></Link>
                 
                 <Link  to={`/women/${elem.id}`}><Text> {elem.name}</Text></Link>
                 <Box

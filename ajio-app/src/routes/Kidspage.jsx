@@ -192,11 +192,11 @@ const Women = () => {
           {data.map((elem) => {
             return (
               <Box key={elem.id}>
-                <Image src={elem.image} alt="image not found" />
-                <Text textColor={"#B19975"} as="b">
+                <Link  to={`/kids/${elem.id}`}> <Image src={elem.image} alt="image not found" /></Link>
+                <Link  to={`/kids/${elem.id}`}><Text textColor={"#B19975"} as="b">
                   {elem.brand}
-                </Text>
-                <Link  to={`/men/${elem.id}`}><Text> {elem.name}</Text></Link>
+                </Text></Link>
+                <Link  to={`/kids/${elem.id}`}><Text> {elem.name}</Text></Link>
                 <Box
                   display={"flex"}
                   justifyContent="center"
