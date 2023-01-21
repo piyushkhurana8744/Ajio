@@ -9,6 +9,7 @@ import Signup from './Signup';
 import Login from './Login';
 import SingleUserPage from './SingleUserPage';
 import Cart from './Cart';
+import Querypage from './Querypage';
 const AllRoutes = () => {
   return (
     <div>
@@ -26,6 +27,7 @@ const AllRoutes = () => {
             <Route path='/login' element={<Login/>}/>
 
             <Route path='/men/:id' element={<SingleUserPage/>} />
+            <Route path='/querypage/:value' element={<Querypage />}></Route>
             <Route path='/women/:id' element={<SingleUserPage/>} />
             <Route path='/kids/:id' element={<SingleUserPage/>} />
         </Routes>

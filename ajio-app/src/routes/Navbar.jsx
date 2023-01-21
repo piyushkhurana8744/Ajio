@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { Box, Flex, Text, Image, Input, Button } from "@chakra-ui/react";
 import { BsFillBagCheckFill } from "react-icons/bs";
@@ -7,6 +8,7 @@ import { SidebarContext } from "../context/SidebarContextProvider";
 const Navbar = () => {
   const { cartData, setCartData, cartLength, setCartLength, setCategory } =
     useContext(SidebarContext);
+
   return (
     <div>
       <Flex
@@ -456,6 +458,7 @@ const Navbar = () => {
                         <Text cursor={"po"}>Play Time</Text>
                       </Box>
                     </Flex>
+
                   </Box>
                 }
               />
@@ -476,10 +479,14 @@ const Navbar = () => {
               </Box>
             </Link>
           </Flex>
+
         </Box>
       </Flex>
     </div>
   );
 };
 
+
 export default Navbar;
+
+
