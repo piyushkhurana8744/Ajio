@@ -16,8 +16,8 @@ const AllRoutes = () => {
         <Box marginTop={'90px'} >
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
+          <Route path='/men' element={<MenPage />} />
             <Route path='/women' element={<Women />} />
-            <Route path='/men' element={<MenPage />} />
             <Route path="/kids" element={<Kidspage />}></Route>
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
