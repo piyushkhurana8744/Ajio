@@ -3,6 +3,7 @@ import axios from "axios";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import Sidebar from "../components/Sidebar";
 import SidebarLarge from '../components/SidebarLarge';
+import { Link } from "react-router-dom";
 import {
   Box,
   Image,
@@ -196,7 +197,7 @@ const Women = () => {
                 <Text textColor={"#B19975"} as="b">
                   {elem.brand}
                 </Text>
-                <Text> {elem.name}</Text>
+                <Link  to={`/men/${elem.id}`}><Text> {elem.name}</Text></Link>
                 <Box
                   display={"flex"}
                   justifyContent="center"
