@@ -6,7 +6,7 @@ import {SidebarContext} from '../context/SidebarContextProvider';
 import "../styles/Navbar.css";
 export default function Navbar2() {
 
-  const { category,setCategory } = React.useContext(SidebarContext);
+  const { setCategory } = React.useContext(SidebarContext);
 
 
   let x = useSelector((data) => {

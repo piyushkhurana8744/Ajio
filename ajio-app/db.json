@@ -22,7 +22,7 @@
       "offer_prices": 300,
       "category": "women-clothing",
       "id": 2,
-      "quantity": 1
+      "quantity": 0
     },
     {
       "image": "https://assets.ajio.com/medias/sys_master/root/20220830/4dvF/630df70df997dd1f8dc72b8f/marks_%26_spencer_navy_kitsch_loungewear_set.jpg",
@@ -34,7 +34,7 @@
       "offer_prices": 1000,
       "category": "women-clothing",
       "id": 3,
-      "quantity": 1
+      "quantity": 0
     },
     {
       "image": "https://assets.ajio.com/medias/sys_master/root/20211216/9VLw/61ba5599aeb26901100e8e86/heeposh_purple_floral_embroidery_flared_kurta_sets.jpg",
@@ -58,7 +58,7 @@
       "offer_prices": 684,
       "category": "women-clothing",
       "id": 5,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "image": "https://assets.ajio.com/medias/sys_master/root/20220326/oiLh/623e2e74aeb26921aff93f02/kimayra_mustard_printed_anarkali_kurta_suit_set.jpg",
@@ -2758,7 +2758,7 @@
       "offer_prices": 820,
       "category": "mens-clothing",
       "id": 230,
-      "quantity": 0
+      "quantity": 1
     },
     {
       "image": "https://assets.ajio.com/medias/sys_master/root/20220927/pNT8/6332df42aeb269dbb3aa32c0/performax_jet_black_fastdry_active_essential_track_pants.jpg",
@@ -4143,7 +4143,7 @@
       "original_price": "₹1,629",
       "discount": 49,
       "category": "kids-clothing",
-      "quantity": 0,
+      "quantity": 1,
       "offer_prices": "499",
       "id": 345
     },
@@ -4195,7 +4195,7 @@
       "original_price": "₹699",
       "discount": 40,
       "category": "kids-clothing",
-      "quantity": 0,
+      "quantity": 1,
       "offer_prices": "350",
       "id": 349
     },
