@@ -28,7 +28,7 @@ const Women = () => {
       setCategory(prev => prev = "women-clothing");
     }
     if(window.location.href === "http://localhost:3000/men"){
-      setCategory(prev => prev = "men-clothing");
+      setCategory(prev => prev = "mens-clothing");
     }
     if(window.location.href === "http://localhost:3000/kids"){
       setCategory(prev => prev = "kids-clothing");

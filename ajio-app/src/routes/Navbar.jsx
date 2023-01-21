@@ -1,5 +1,4 @@
-
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import {Box,Flex,Text,Image,Input,Button} from "@chakra-ui/react"
 import {BsFillBagCheckFill} from "react-icons/bs"
 import Menuitem from '../components/MenuItem'

@@ -16,7 +16,7 @@ const MobileItem = ({nameitem,item1,item2,item3,item4,item5,item6,item7,item8,it
   return (
     <div style={{zIndex:"5"}}>
       <Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+  <MenuButton as={Button}>
     {nameitem}
   </MenuButton>
   <MenuList>
