@@ -4,7 +4,7 @@ import axios from "axios";
 export const SidebarContext = React.createContext();
 
 export default function SidebarContextProvider({ children }) {
-  
+
   const getCartItems = async () => {
     let res = await axios.get(`http://localhost:8080/data`);
     let data = res.data.filter((elem) => elem.quantity !== 0);
@@ -27,6 +27,7 @@ export default function SidebarContextProvider({ children }) {
   return (
     <SidebarContext.Provider
       value={{
+        getCartItems,
         cartData,
         setCartData,
         cartLength,
