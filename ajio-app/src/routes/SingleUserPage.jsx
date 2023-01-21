@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import styled from "styled-components";
 import "./SingleUserPage.css";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import {SidebarContext} from '../context/SidebarContextProvider';
 
 const Container = styled.div`
   display: flex;
@@ -29,8 +30,10 @@ const SingleProductImage = styled(Image)`
   }
 `;
 const SingleUserPage = () => {
+
+  const { cartLength,setCartLength } = React.useContext(SidebarContext);
+
   const [product, setProduct] = useState({});
-  const [cartItems, setCartItems] = React.useState(0);
   const [text, setText] = React.useState(
     "Easy 15 days return and exchange. Return Policies may vary based on products and promotions. For full details on our Returns Policies, please click here․"
   );
@@ -53,14 +56,14 @@ const SingleUserPage = () => {
     let res = await axios.patch(`http://localhost:8080/data/${id}`, {
       quantity: 1,
     });
-    setCartItems((prev) => prev + 1);
+    setCartLength((prev) => prev + 1);
   };
 
   const handleRemoveFromCart = async (id) => {
     let res = await axios.patch(`http://localhost:8080/data/${id}`, {
       quantity: 0,
     });
-    setCartItems((prev) => prev - 1);
+    setCartLength((prev) => prev - 1);
   };
 
   const handleClick = (id) => {
@@ -70,7 +73,7 @@ const SingleUserPage = () => {
   };
   useEffect(() => {
     ApiFetch(id);
-  }, [id, cartItems]);
+  }, [id, cartLength]);
   return (
     <Box>
       <Container>
@@ -208,7 +211,7 @@ const SingleUserPage = () => {
                     textColor={"gray.600"}
                   >
                     {" "}
-                    {product.orginal_price}
+                    {product.original_price}
                   </Text>
                   <Text
                     textColor={"#B19975"}
