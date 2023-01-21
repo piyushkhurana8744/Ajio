@@ -30,4 +30,33 @@
     transform: scale(1.2);
     transition: all 0.5s ease;
   }
-  
+   /* .thirdRow {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 600px) {
+  .thirdRow {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}  */
+/* @media (max-width: 768px) {
+  .thirdRow {
+  width: 100%;
+  }
+} */
+ .your-button-class {
+  background-color: #D5A249;
+  border: none;
+}
+
+
+.your-button-class:active {
+  background-color: #B19975;
+  border: 2px solid black
+}
+.your-button-class.active {
+  border: 1px solid black;
+} 
+ .your-button-class:focus {
+  background-color: #B19975;
+} 
