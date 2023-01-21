@@ -183,7 +183,7 @@ const Querypage = () => {
           </Box>
         </Box>
 
-        <Divider marginBottom={"5"} marginTop="1" />
+        <Divider marginBottom={"4"} marginTop="1" />
         <Grid
           templateColumns={{
             base: "repeat(1,1fr)",

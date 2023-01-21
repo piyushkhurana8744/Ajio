@@ -15,7 +15,6 @@ const Navbar = () => {
             navigate(`/querypage/${e.target.value}`)
              
         }
-        
     }
   return (
     <div >
