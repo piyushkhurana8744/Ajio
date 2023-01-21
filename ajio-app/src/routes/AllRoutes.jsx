@@ -22,6 +22,8 @@ const AllRoutes = () => {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/men/:id' element={<SingleUserPage/>} />
+            <Route path='/women/:id' element={<SingleUserPage/>} />
+            <Route path='/kids/:id' element={<SingleUserPage/>} />
         </Routes>
         </Box>
       
