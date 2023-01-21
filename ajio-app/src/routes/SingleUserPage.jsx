@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import "./SingleUserPage.css";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const Container = styled.div`
   display: flex;
@@ -73,7 +74,7 @@ const SingleUserPage = () => {
   return (
     <Box>
       <Container>
-        <Box display="flex" gap="100px" marginTop="10px">
+        <Box display="flex" gap="80px" marginTop="10px">
           <SingleProductContainer>
             <SingleProductImage
               className="singleImage"
@@ -127,6 +128,10 @@ const SingleUserPage = () => {
           > */}
             {/* ///////// ///////////////*/}
             <Box style={{ width: "400px" }}>
+              <Box style={{display:"flex"}}><Box>
+            <ChevronLeftIcon boxSize={6}  mt="200px" mr="5px"/>
+            </Box>
+            <Box>
               <SingleProductImage
                 width="400px"
                 // height="500px"
@@ -134,7 +139,12 @@ const SingleUserPage = () => {
                 alt="image not found"
                 
               />
-              <Box style={{ display: "flex", marginTop: "30px" }}>
+              </Box>
+              <Box>
+              <ChevronRightIcon mt="200px" boxSize={6}   ml="5px"/>
+              </Box>
+              </Box>
+              <Box style={{ display: "flex", marginTop: "30px" ,marginLeft:"28px" }}>
                 <Button className="your-button-class"
                   style={{ borderRadius: "0px", size: "s" }}
                   onClick={handleShow}
@@ -152,6 +162,8 @@ const SingleUserPage = () => {
                     textAlign: "Left",
                     fontWeight: "normal",
                     marginTop: "5px",
+                    marginLeft:"28px"
+                    
                   }}
                 >
                   {text}
@@ -214,11 +226,13 @@ const SingleUserPage = () => {
                   </Text>
                   <div className="pagination-container">
                     <div className="pagination">
+                    <ChevronLeftIcon mt="10px" mr="7px"/>
                       <div className="pagination-item">28</div>
                       <div className="pagination-item">30</div>
                       <div className="pagination-item">32</div>
                       <div className="pagination-item">34</div>
                       <div className="pagination-item">36</div>
+                      <ChevronRightIcon mt="10px"/>
                     </div>
                   </div>
                 </Box>
