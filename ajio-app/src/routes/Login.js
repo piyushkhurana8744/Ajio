@@ -6,26 +6,35 @@ import {
     Input,
     Checkbox,
     Stack,
-    Link,
     Button,
     Heading,
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import {useState} from "react";
+  import {useState,useContext} from "react";
+  import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { SidebarContext } from '../context/SidebarContextProvider';
   
   export default function SimpleCard() {
+      const{login,setLogin} = useContext(SidebarContext);
       const [username, setUsername] = useState('');
       const [password, setPassword] = useState('');
       const [error, setError] = useState('');
+
+      const navigate = useNavigate();
   
       const handleLogin = () => {
-       
+
+
+
+        
           let user = JSON.parse(localStorage.getItem("user"));
   
           if (username === user.username && password === user.password) {
               alert("Login succesfull")
-              window.location.href = "/Men";
+              navigate("/");
+              setLogin(true);
   
           } else {
               setError("Invalid username or password");
@@ -75,6 +84,7 @@ import {
                   }} onClick={handleLogin}>
                   Log In
                 </Button>
+                <Link to="/signup" >New User? Signup</Link>
                 {error && <p>{error}</p>}
               </Stack>
             </Stack>

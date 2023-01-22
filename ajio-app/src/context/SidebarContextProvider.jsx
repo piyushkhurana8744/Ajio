@@ -6,7 +6,7 @@ export const SidebarContext = React.createContext();
 export default function SidebarContextProvider({ children }) {
 
   const getCartItems = async () => {
-    let res = await axios.get(`http://localhost:8080/data`);
+    let res = await axios.get(`https://ajio-qvwt.onrender.com/data`);
     let data = res.data.filter((elem) => elem.quantity !== 0);
     setCartData(data);
     setCartLength(data.length);
@@ -16,6 +16,7 @@ export default function SidebarContextProvider({ children }) {
     getCartItems();
   }, []);
 
+  const [login,setLogin] = React.useState(false);
   const [category, setCategory] = React.useState("");
   const [minPrice, setMinPrice] = React.useState("1");
   const [maxPrice, setMaxPrice] = React.useState("9999");
@@ -27,6 +28,7 @@ export default function SidebarContextProvider({ children }) {
   return (
     <SidebarContext.Provider
       value={{
+        login,setLogin,
         getCartItems,
         cartData,
         setCartData,

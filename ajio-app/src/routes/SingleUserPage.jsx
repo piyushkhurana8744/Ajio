@@ -48,19 +48,19 @@ const SingleUserPage = () => {
     setText("We assure the authenticity and quality of our products");
   };
   const ApiFetch = (id) => {
-    axios.get(`http://localhost:8080/data/${id}`).then((res) => {
+    axios.get(`https://ajio-qvwt.onrender.com/data/${id}`).then((res) => {
       setProduct(res.data);
     });
   };
   const handleAddToCart = async (id) => {
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: 1,
     });
     setCartLength((prev) => prev + 1);
   };
 
   const handleRemoveFromCart = async (id) => {
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: 0,
     });
     setCartLength((prev) => prev - 1);

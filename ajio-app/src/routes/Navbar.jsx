@@ -5,9 +5,27 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import Menuitem from "../components/MenuItem";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "../context/SidebarContextProvider";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const { cartData, setCartData, cartLength, setCartLength, setCategory } =
+
+  let user = JSON.parse(localStorage.getItem("user"));
+
+  // console.log(user);
+
+  const navigate = useNavigate();
+
+  const { login,setLogin,cartData, setCartData, cartLength, setCartLength, setCategory } =
     useContext(SidebarContext);
+
+    const handleLogout = () => {
+
+      localStorage.removeItem("user");
+      navigate('/login')
+      
+   
+    }
+
+    
 
   return (
     <div>
@@ -467,11 +485,14 @@ const Navbar = () => {
               {" "}
               <Input placeholder={"SEARCH"} borderRadius="20px"></Input>
             </Box>
-            <Link to="/signup">
+            
               <Box>
-                <Button>SIGN IN</Button>
+                {/* <Button  >{login || user.name ? "LOGOUT" : "SIGN IN"}</Button> */}
+                {user !== null ? <Button onClick={handleLogout} >LOGOUT</Button> : <Link to="/login" ><Button>Login</Button></Link> }
               </Box>
-            </Link>
+            
+
+            {login && user? <Text as="b" >{user.name}</Text> : null}
             <Link to="/cart">
               <Box display="flex" gap={'2'}  >
                 <BsFillBagCheckFill style={{ fontSize: "30px" }} />

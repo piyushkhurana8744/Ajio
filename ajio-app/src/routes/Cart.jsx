@@ -21,7 +21,7 @@ const Cart = () => {
   const [totalActual, setTotalActual] = React.useState(0);
 
   const handleDelete = async (id) => {
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: 0,
     });
     setCartLength((prev) => prev - 1);
@@ -30,7 +30,7 @@ const Cart = () => {
   const handleQuantity = async (id, quant, value) => {
     cartData.map((elem) => (elem.id === id ? (quant = quant + value) : quant));
 
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: quant,
     });
 
