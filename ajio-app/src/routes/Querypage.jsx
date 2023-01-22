@@ -25,13 +25,13 @@ const Querypage = () => {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
   window.onload = function () {
-    if(window.location.href === "http://localhost:3000/women"){
+    if(window.location.href === "https://ajio-app.vercel.app/women"){
       setCategory(prev => prev = "women-clothing");
     }
-    if(window.location.href === "http://localhost:3000/men"){
+    if(window.location.href === "https://ajio-app.vercel.app/men"){
       setCategory(prev => prev = "men-clothing");
     }
-    if(window.location.href === "http://localhost:3000/kids"){
+    if(window.location.href === "https://ajio-app.vercel.app/kids"){
       setCategory(prev => prev = "kids-clothing");
     }
   }
