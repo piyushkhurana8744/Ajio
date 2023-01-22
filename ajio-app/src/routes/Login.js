@@ -32,7 +32,8 @@ import { SidebarContext } from '../context/SidebarContextProvider';
           let user = JSON.parse(localStorage.getItem("user"));
   
           if (username === user.username && password === user.password) {
-              alert("Login succesfull")
+            localStorage.setItem("loginValue",JSON.stringify("login"))
+            alert("Login succesfull")
               navigate("/");
               setLogin(true);
   

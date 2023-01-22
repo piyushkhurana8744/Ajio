@@ -3,6 +3,7 @@ import axios from "axios";
 import { Box, Text, Grid, Image, Button } from "@chakra-ui/react";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import { useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const {
@@ -17,8 +18,15 @@ const Cart = () => {
     minDiscount,
   } = React.useContext(SidebarContext);
 
+  const navigate = useNavigate();
+
   const [total, setTotal] = React.useState(0);
   const [totalActual, setTotalActual] = React.useState(0);
+
+  const handleShipping = () => {
+    alert("Your order has been placed!")
+    navigate("/");
+  }
 
   const handleDelete = async (id) => {
     let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
@@ -216,6 +224,7 @@ const Cart = () => {
                 marginTop={"5"}
                 bg="#D5A249"
                 color="white"
+                onClick={handleShipping}
               >
                 PROCEED TO SHIPPING
               </Button>

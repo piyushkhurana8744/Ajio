@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
 
   let user = JSON.parse(localStorage.getItem("user"));
+  let loginValue = JSON.parse(localStorage.getItem("loginValue"));
 
   // console.log(user);
 
@@ -19,12 +20,18 @@ const Navbar = () => {
 
     const handleLogout = () => {
 
+      localStorage.removeItem("loginValue");
       localStorage.removeItem("user");
       navigate('/login')
-      
-   
+         
     }
 
+    const handleEnter=(e)=>{
+      if(e.key=="Enter"){
+          navigate(`/querypage/${e.target.value}`)
+           
+      }
+  }
     
 
   return (
@@ -483,16 +490,16 @@ const Navbar = () => {
             </Box>
             <Box>
               {" "}
-              <Input placeholder={"SEARCH"} borderRadius="20px"></Input>
+              <Input onKeyPress={handleEnter} placeholder={"SEARCH"} borderRadius="20px"></Input>
             </Box>
             
               <Box>
                 {/* <Button  >{login || user.name ? "LOGOUT" : "SIGN IN"}</Button> */}
-                {user !== null ? <Button onClick={handleLogout} >LOGOUT</Button> : <Link to="/login" ><Button>Login</Button></Link> }
+                {loginValue !== null ? <Button onClick={handleLogout} >LOGOUT</Button> : <Link to="/login" ><Button>Login</Button></Link> }
               </Box>
             
 
-            {login && user? <Text as="b" >{user.name}</Text> : null}
+            {loginValue ? <Text as="b" >{user.name}</Text> : null}
             <Link to="/cart">
               <Box display="flex" gap={'2'}  >
                 <BsFillBagCheckFill style={{ fontSize: "30px" }} />
