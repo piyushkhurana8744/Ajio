@@ -14,6 +14,9 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "../context/SidebarContextProvider";
 const MobileNav = () => {
+
+  let user = JSON.parse(localStorage.getItem("user"));
+  
   const { cartData, setCartData, cartLength, setCartLength, setCategory } =
     useContext(SidebarContext);
 

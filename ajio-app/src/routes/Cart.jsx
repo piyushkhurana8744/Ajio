@@ -3,6 +3,7 @@ import axios from "axios";
 import { Box, Text, Grid, Image, Button } from "@chakra-ui/react";
 import { SidebarContext } from "../context/SidebarContextProvider";
 import { useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const {
@@ -17,11 +18,18 @@ const Cart = () => {
     minDiscount,
   } = React.useContext(SidebarContext);
 
+  const navigate = useNavigate();
+
   const [total, setTotal] = React.useState(0);
   const [totalActual, setTotalActual] = React.useState(0);
 
+  const handleShipping = () => {
+    alert("Your order has been placed!")
+    navigate("/");
+  }
+
   const handleDelete = async (id) => {
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: 0,
     });
     setCartLength((prev) => prev - 1);
@@ -30,7 +38,7 @@ const Cart = () => {
   const handleQuantity = async (id, quant, value) => {
     cartData.map((elem) => (elem.id === id ? (quant = quant + value) : quant));
 
-    let res = await axios.patch(`http://localhost:8080/data/${id}`, {
+    let res = await axios.patch(`https://ajio-qvwt.onrender.com/data/${id}`, {
       quantity: quant,
     });
 
@@ -216,6 +224,7 @@ const Cart = () => {
                 marginTop={"5"}
                 bg="#D5A249"
                 color="white"
+                onClick={handleShipping}
               >
                 PROCEED TO SHIPPING
               </Button>

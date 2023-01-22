@@ -274,6 +274,7 @@ const HomePage = () => {
       <Box>
         
       </Box>
+      <Footer/>
     </div>
   )
 }

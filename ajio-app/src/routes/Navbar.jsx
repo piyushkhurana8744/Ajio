@@ -5,9 +5,34 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import Menuitem from "../components/MenuItem";
 import { Link } from "react-router-dom";
 import { SidebarContext } from "../context/SidebarContextProvider";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
-  const { cartData, setCartData, cartLength, setCartLength, setCategory } =
+
+  let user = JSON.parse(localStorage.getItem("user"));
+  let loginValue = JSON.parse(localStorage.getItem("loginValue"));
+
+  // console.log(user);
+
+  const navigate = useNavigate();
+
+  const { login,setLogin,cartData, setCartData, cartLength, setCartLength, setCategory } =
     useContext(SidebarContext);
+
+    const handleLogout = () => {
+
+      localStorage.removeItem("loginValue");
+      localStorage.removeItem("user");
+      navigate('/login')
+         
+    }
+
+    const handleEnter=(e)=>{
+      if(e.key==="Enter"){
+          navigate(`/querypage/${e.target.value}`)
+           
+      }
+  }
+    
 
   return (
     <div>
@@ -465,13 +490,16 @@ const Navbar = () => {
             </Box>
             <Box>
               {" "}
-              <Input placeholder={"SEARCH"} borderRadius="20px"></Input>
+              <Input onKeyPress={handleEnter} placeholder={"SEARCH"} borderRadius="20px"></Input>
             </Box>
-            <Link to="/signup">
+            
               <Box>
-                <Button>SIGN IN</Button>
+                {/* <Button  >{login || user.name ? "LOGOUT" : "SIGN IN"}</Button> */}
+                {loginValue !== null ? <Button onClick={handleLogout} >LOGOUT</Button> : <Link to="/login" ><Button>Login</Button></Link> }
               </Box>
-            </Link>
+            
+
+            {loginValue ? <Text as="b" >{user.name}</Text> : null}
             <Link to="/cart">
               <Box display="flex" gap={'2'}  >
                 <BsFillBagCheckFill style={{ fontSize: "30px" }} />

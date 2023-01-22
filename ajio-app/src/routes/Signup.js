@@ -19,6 +19,7 @@ import React,{ useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 export default function SignupCard() {
+  const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -27,9 +28,9 @@ export default function SignupCard() {
 
   const handleSignup = () => {
     
-      let user = {username:username , password:password};
+      let user = {name:name, username:username , password:password};
       localStorage.setItem("user", JSON.stringify(user));
-      window.location.href = "/";
+      window.location.href = "/login";
       console.log(user);
   }
   
@@ -64,7 +65,7 @@ export default function SignupCard() {
               <Box>
                 <FormControl id="firstName" isRequired>
                   <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
+                  <Input type="text" value={name} onChange={e => setName(e.target.value)}/>
                 </FormControl>
               </Box>
               <Box>
@@ -100,7 +101,7 @@ export default function SignupCard() {
                 bg={'yellow.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500',
+                  bg: 'yellow.500',
                 }} type="button" onClick={handleSignup}>
                 Sign up
               </Button>
