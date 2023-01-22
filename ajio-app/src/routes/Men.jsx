@@ -14,6 +14,8 @@ import {
   Button,
   HStack
 } from "@chakra-ui/react";
+import Footer from '../components/Footer'
+
 
 const Women = () => {
   const { cartData, setCartData,cartLength,setCartLength,category,setCategory, minPrice, maxPrice, maxDiscount, minDiscount } = React.useContext(SidebarContext);
@@ -21,6 +23,7 @@ const Women = () => {
   const [data, setData] = React.useState([]);
   const [grid, setGrid] = React.useState(3);
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  // const [footer, setFooter] = React.useState(false);
 
   window.onload =  function (){
     if(window.location.href === "http://localhost:3000/women"){
@@ -39,10 +42,15 @@ const Women = () => {
   };
 
   const getData = async () => {
-    let res = await axios.get(
-      `https://ajio-qvwt.onrender.com/data?category=${category}&offer_prices_gte=${minPrice}&offer_prices_lte=${maxPrice}&discount_gte=${minDiscount}&discount_lte=${maxDiscount}`
-    );
-    setData(res.data);
+    try {
+      let res = await axios.get(
+        `https://ajio-qvwt.onrender.com/data?category=${category}&offer_prices_gte=${minPrice}&offer_prices_lte=${maxPrice}&discount_gte=${minDiscount}&discount_lte=${maxDiscount}`
+      );
+      setData(res.data);
+      // setFooter(true);
+    } catch (error) {
+      console.log(error)
+    }
   };
 
   const handleAddToCart = async (id) => {
@@ -232,8 +240,10 @@ const Women = () => {
               </Box>
             );
           })}
+
         </Grid>
       </Box>
+      {/* {footer ? <Footer /> : null} */}
     </Box>
   );
 };

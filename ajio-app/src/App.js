@@ -10,7 +10,7 @@ function App() {
     <div className="App">
      {isLargerThan800?<Navbar />:<MobileNav />}
       <AllRoutes />
-      <Footer  />
+      {/* <Footer  /> */}
     </div>
   );
 }

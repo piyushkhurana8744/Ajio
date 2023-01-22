@@ -27,7 +27,7 @@ const Navbar = () => {
     }
 
     const handleEnter=(e)=>{
-      if(e.key=="Enter"){
+      if(e.key==="Enter"){
           navigate(`/querypage/${e.target.value}`)
            
       }
