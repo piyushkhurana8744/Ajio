@@ -15,7 +15,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 
-const Sidebar = () => {
+const Sidebar = ({firstpart,second,third,fourth,all,handleChange}) => {
   const {
     category,
     setCategory,
@@ -52,11 +52,11 @@ const Sidebar = () => {
               marginTop={"1"}
             >
               <Stack display={"flex"} justifyContent={"left"}>
-                <Radio value="women-clothing">All</Radio>
-                <Radio value="saree">Sarees</Radio>
-                <Radio value="shirts-tops-tunics">Shirts, Tops & Tunics</Radio>
-                <Radio value="kurta-kurti">Kurtas & Kurtis</Radio>
-                <Radio value="kurta-suit-sets">Kurta Suit Sets</Radio>
+                <Radio value={all}>All</Radio>
+                <Radio value={firstpart}>{firstpart}</Radio>
+                <Radio value={second}>{second}</Radio>
+                <Radio value={third}>{third}</Radio>
+                <Radio value={fourth}>{fourth}</Radio>
               </Stack>
             </RadioGroup>
           </MenuGroup>

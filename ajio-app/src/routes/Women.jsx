@@ -107,7 +107,7 @@ const Women = () => {
           justifyContent="space-between"
           bg={"whitesmoke"}
         >
-          {windowWidth < 1000 ? <Sidebar /> : null}
+          {windowWidth < 1000 ? <Sidebar all={"women-clothing"} firstpart={"saree"} second={"shirts-tops-tunics"} third={"kurta-kurti"} fourth={"kurta-suit-sets"}/> : null}
           <Box>
             {windowWidth <= 1000 ? null : (
               <Box display={"flex"} gap="5">
