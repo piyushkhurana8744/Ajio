@@ -24,6 +24,6 @@ Ajio Clone
 
 - **Signup Page**
 
-<img src="" />
+<img src="https://vlivetricks.com/wp-content/uploads/2021/06/ajio-sign-up-form.jpg" />
 
 
