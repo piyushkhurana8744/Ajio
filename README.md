@@ -10,7 +10,7 @@ Ajio Clone
 
 - **Home Page**
 
-(https://assets-news-bcdn.dailyhunt.in/cmd/resize/551x251_90/fetchdata16/images/c6/52/c6/c652c651d0504b6ca995b53a2f89d07e0f31754d5089c94451d26d8c31ae4f56.webp)
+<img src="https://assets-news-bcdn.dailyhunt.in/cmd/resize/551x251_90/fetchdata16/images/c6/52/c6/c652c651d0504b6ca995b53a2f89d07e0f31754d5089c94451d26d8c31ae4f56.webp" />
 
 - **Home Page : Footer Section**
 
