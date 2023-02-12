@@ -2,7 +2,7 @@
 
 AJIO, a fashion and lifestyle brand.
 
-![Logo](https://assets.ajio.com/static/img/Ajio-Logo.svg)
+<img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" width="300px"/>
 
 <h3 align="center">It's a Full Stack E-commerce web application with all the major functionalities</h3>
 
@@ -66,7 +66,7 @@ This is the main landing page of our website. Here, if you clicked on any naviga
 
 All pages are responsive.
 
-![landing_page](https://i.postimg.cc/7YHw7S9D/Screenshot-2023-02-12-212736.png)
+![landing_page](https://i.postimg.cc/mDVyddxf/Screenshot-2023-02-12-212736.png)
 
 ### Sign up Page -
 
