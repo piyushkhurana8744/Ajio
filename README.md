@@ -2,7 +2,7 @@
 
 AJIO, a fashion and lifestyle brand.
 
-![Logo](https://ajio-app.vercel.app/)
+![Logo](https://assets.ajio.com/static/img/Ajio-Logo.svg)
 
 <h3 align="center">It's a Full Stack E-commerce web application with all the major functionalities</h3>
 
